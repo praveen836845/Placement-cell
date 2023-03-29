@@ -1,0 +1,142 @@
+<link rel="stylesheet" type="text/css" href="../../css/loginpage.css">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+  @media (max-width: 767px) {
+.panels-container{
+  display: none;
+}}
+</style>
+<% if (locals.user) {%>
+  <!--<div class="container mt-4 col-md-4">
+    <h4>Edit student details</h4>
+
+    <form class="row g-3 mt-1 border border-dark rounded p-2" style="--bs-border-opacity: 0.5"
+      action="/student/update/<%= student_details.id %>" method="POST">
+
+      <div class="col-12">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter student name" id="name" name="name"
+          value=" <%= student_details.name %>" required />
+      </div>
+
+      <div class="col-12">
+        <label for="college" class="form-label">college</label>
+        <input type="text" class="form-control" placeholder="Enter student college" id="college" name="college"
+          value="<%= student_details.college %>" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="placement-status" class="form-label">Placement status</label>
+        <select id="placement-status" class="form-select" required name="placement_status">
+          <option selected>Not placed</option>
+          <option>Placed</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="batch" class="form-label">Batch</label>
+        <input type="text" class="form-control" id="batch" placeholder="Enter batch no." name="batch"
+          value="<%= student_details.batch %>" required />
+      </div>
+
+      <div class="col-md-4">
+        <label for="dsa-score" class="form-label">DSA score</label>
+        <input type="text" class="form-control" id="dsa-score" name="dsa_score" value="<%= student_details.dsa_score %>"
+          required />
+      </div>
+
+
+      <div class="col-md-4">
+        <label for="webdev-score" class="form-label">WebDev score</label>
+        <input type="text" class="form-control" id="webdev-score" name="webdev_score"
+          value="<%= student_details.webdev_score %>" required />
+      </div>
+
+
+      <div class="col-md-4">
+        <label for="react-score" class="form-label">React score</label>
+        <input type="text" class="form-control" id="react-score" name="react_score"
+          value="<%= student_details.react_score %>" required />
+      </div>
+
+      <div class="col-12 ">
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+
+    </form>
+  </div>-->
+
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="/student/update/<%= student_details.id %>" method="POST" class="sign-in-form" data-aos-duration="1500" data-aos="zoom-in">
+          <h2 class="title">Edit Student Details</h2>
+
+         
+
+          <div class="input-field">
+           <i class="fas fa-user"></i>
+            <input type="text" class="form-control" placeholder="Enter student name" id="name" name="name"
+          value=" <%= student_details.name %>" required />
+          </div>
+        
+
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" class="form-control" placeholder="Enter student college" id="college" name="college"
+          value="<%= student_details.college %>" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <select id="placement-status" class="form-select" required name="placement_status">
+              <option selected>Not placed</option>
+              <option>Placed</option>
+            </select>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" class="form-control" id="batch" placeholder="Enter batch no." name="batch"
+          value="<%= student_details.batch %>" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" class="form-control" id="dsa-score" name="dsa_score" value="<%= student_details.dsa_score %>"
+          required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" class="form-control" id="webdev-score" name="webdev_score"
+          value="<%= student_details.webdev_score %>" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" class="form-control" id="react-score" name="react_score"
+          value="<%= student_details.react_score %>" required />
+          </div>
+          <input type="submit" class="btn soild" value="Update" />
+        </form>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel" data-aos-duration="1500" data-aos="zoom-in">
+        <div class="content">
+          <h3>Want to edit your details?</h3>
+          <p>
+             Edit Here!
+          </p>
+         
+        </div>
+        <img  src="../img/log.png" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <script async src="../app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> 
+  <%} %>

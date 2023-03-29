@@ -1,0 +1,112 @@
+
+<!-- css link -->
+<link rel="stylesheet" href="../css/loginpage.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!-- sign in page -->
+<!--<div class="container mt-4 col-md-4">
+  <div class="intro">
+    <div class="card gradient-custom" style="border-radius: 1rem;">
+      <div class="row justify-content-center">
+        <div class="card-body p-4 text-black">
+          <div class="my-md-3">
+            <h2>Sign In</h2>
+            <br>
+
+            <form method="POST" action="/create-session">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" />
+              </div>
+              <div class="text-center py-5">
+                <button class="btn btn-light btn-lg btn-rounded px-5" type="submit">Sign In</button>
+              </div>
+            </form>
+            <p class="mt-2"><a href="/sign-up">Don't have an account? Sign-Up</a></p>
+          
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <div class="container">
+      <div class="forms-container">
+      
+        <div class="signin-signup">
+          <form method="POST" action="/create-session" class="sign-in-form" data-aos-duration="1500" data-aos="zoom-in">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" class="form-control" id="password" name="password" required/>
+            </div>
+            <input type="submit" class="btn solid" />
+          </form>
+          <form method="POST" action="/create" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" class="form-control" id="username" name="username" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email"  placeholder="Email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+              required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" class="form-control" id="password" name="password" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Confirm Password" class="form-control" id="confirm_password" name="confirm_password" required />
+            </div>
+              
+            <input type="submit" class="btn" value="Sign up" />
+          </form>
+        </div>
+      
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel" data-aos-duration="1500" data-aos="zoom-in">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Are you a new person & Don't have an account?
+              Sign-Up Here!
+            </p>
+            <button  class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          
+          <lottie-player class="image" src="https://assets7.lottiefiles.com/packages/lf20_mjlh3hcy.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay></lottie-player>
+
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Already have an account? Sign-in Here!
+            </p>
+            <button  class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <lottie-player class="image" src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay></lottie-player>
+        </div>
+      </div>
+    </div>
+<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+<script async src="../app.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>

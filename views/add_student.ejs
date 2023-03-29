@@ -1,0 +1,127 @@
+
+<!-- css link -->
+<link rel="stylesheet" href="../css/loginpage1.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- add student form -->
+<% if (locals.user) {%>
+  <div  data-aos-duration="1500" data-aos="fade-out " class="d-flex m-0  p-5 flex-wrap justify-content-center" style="background: #8A2387;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2f9aff, #2658fb, #190677); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ">
+  <div class="container mt-4 col-md-6">
+    <style>
+      form{
+
+        margin:  auto;
+        text-align: center;
+        align-items: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 100px 100px 0 rgba(0, 0, 0, 0.24);
+        margin-top: 2%;
+        margin-bottom: 100px;
+        color: #5181e0;
+        background-color: white;
+    }
+    input{
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      outline: 0px solid #5181e022;
+      color: #5181e0;
+      background-color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: .875rem;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px #5181e011;
+      appearance: none;
+      transition: 50ms;
+      display: block;
+      margin: auto;   
+    }
+    .inp1{
+      width: 600px;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      outline: 0px solid #5181e022;
+      color: #5181e0;
+      background-color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: .875rem;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px #5181e011;
+      appearance: none;
+      transition: 50ms;
+      display: block;
+      margin: auto;
+    }
+    </style>
+    <div class="intro">
+     
+        
+        <form class="row g-4 mt-4 p-3" style="--bs-border-opacity: 0.5" action="/student/create" method="POST">
+
+          <span style="text-align:center;"><h4>ADD STUDENT</h4></span>
+          
+          <div class="col-12">
+            <label for="name" class=" form-label">Name</label>
+            <input type="text" class="inp1" placeholder="Enter student name" id="name" name="name" required />
+          </div>
+
+          <div class="col-12">
+            <label for="email" class=" form-label">Email</label>
+            <input type="text" class="inp1" placeholder="Enter student email" id="email" name="email"
+              required />
+          </div>
+
+          <div class="col-12">
+            <label for="college" class=" form-label">College</label>
+            <input type="text" class="inp1" placeholder="Enter student college" id="college" name="college"
+              required />
+          </div>
+
+          <div class="col-md-6">
+            <label for="placement-status" class="form-label">Placement status</label>
+            <select id="placement-status" class="form-select" required name="placement_status">
+              <option selected>Not placed</option>
+              <option>Placed</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="batch" class="form-label">Batch</label>
+            <input type="text" class="" id="batch" placeholder="Enter batch no." name="batch" required />
+          </div>
+
+          <div class="col-md-4">
+            <label for="dsa-score" class="form-label">DSA score</label>
+            <input type="number" class="" id="dsa-score" name="dsa_score" required />
+          </div>
+
+          <div class="col-md-4">
+            <label for="webdev-score" class="form-label">WebDev score</label>
+            <input value="0" min={0} type="number" class="" id="webdev-score" name="webdev_score" required />
+          </div>
+
+          <div class="col-md-4">
+            <label for="react-score" class="form-label">React score</label>
+            <input value="0" min={0} type="number" class="" id="react-score" name="react_score" required />
+          </div>
+
+          <div class="text-center py-2">
+            <button value="0"  min={0} class="btn btn1 btn-light btn-lg btn-rounded px-4" type="submit">Add Student</button>
+          </div>
+        
+        </form>
+      
+
+    </div>
+  </div>
+</div>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+
+  <%} %>

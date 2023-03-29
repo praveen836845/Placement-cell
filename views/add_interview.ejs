@@ -1,0 +1,86 @@
+<!-- css link -->
+<link rel="stylesheet" href="../css/loginpage1.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- add interview form -->
+<% if (locals.user) {%>
+  <div  data-aos-duration="1500" data-aos="zoom-in" class="d-flex m-0 p-5 p-2 flex-wrap justify-content-center" style="background: #8A2387;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2f9aff, #2658fb, #190677); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ">
+  <div class="container mt-4 col-md-6">
+    <div class="intro">
+      <style>
+        form{
+  
+          margin:  auto;
+          text-align: center;
+          align-items: center;
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 100px 100px 0 rgba(0, 0, 0, 0.24);
+          margin-top: 2%;
+          margin-bottom: 100px;
+          color: #5181e0;
+          background-color: white;
+      }
+      input{
+        padding: 1rem 1.5rem;
+        border: none;
+        border-radius: 12px;
+        outline: 0px solid #5181e022;
+        color: #5181e0;
+        background-color: #fff;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: .875rem;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 10px #5181e011;
+        appearance: none;
+        transition: 50ms;
+        display: block;
+        margin: auto;   
+      }
+      .inp1{
+        width: 600px;
+        padding: 1rem 1.5rem;
+        border: none;
+        border-radius: 12px;
+        outline: 0px solid #5181e022;
+        color: #5181e0;
+        background-color: #fff;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: .875rem;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 10px #5181e011;
+        appearance: none;
+        transition: 50ms;
+        display: block;
+        margin: auto;
+      }
+      </style>
+      <div class=""  data-aos-duration="1500" data-aos="zoom-in">
+        <form class="row g-4 mt-4 p-3" style="--bs-border-opacity: 0.5" action="/interview/create" method="POST">
+          <div class="col-12">
+
+          <span style="text-align:center;"><h4>ADD INTERVIEW</h4></span>
+            <label for="company" class="form-label">Company</label>
+            <input type="text" class="inp1" placeholder="Enter company name" id="company" name="company"
+              required />
+          </div>
+
+          <div class="col-12">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="inp1" placeholder="Enter student email" id="date" name="date" required />
+          </div>
+
+          <div class="text-center py-2">
+            <button class="btn btn2 btn-light btn-lg btn-rounded px-4" type="submit">Add Interview</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <%} %>

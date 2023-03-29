@@ -1,0 +1,72 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+.bg-image {
+  /* Full height */
+  height: 100%;
+}
+
+
+@media (min-width: 560px) and (max-width: 750px) {
+
+  html,
+  body,
+  .intro {
+    height: 830px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+
+  html,
+  body,
+  .intro {
+    height: 830px;
+  }
+}
+
+
+/*.gradient-custom {
+  /* fallback for old browsers 
+  background: #667eea;
+
+  /* Chrome 10-25, Safari 5.1-6 
+  background: -webkit-linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+}*/
+.gradient-custom {
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+}
+.py-2 .btn1{
+    width:183px !important;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .py-2 .btn2{
+    width:200px !important;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
